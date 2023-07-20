@@ -10,6 +10,7 @@ from time import sleep
 sleep(3)
 
 workbook_path = r"\\WBR\shared\PAYROLL\WBR Payroll WE 2022\Local 11 June 2023.xlsx"
+workbook_path = r"\\WBR\shared\PAYROLL\WBR Payroll WE 2022\Local 11 June 2023.xlsx"
 
 workbook = load_workbook(filename=workbook_path, data_only=True)
 
@@ -20,9 +21,9 @@ column_list = []
 for cell in column_range:
     column_list.append(cell[0].value or "")
 
-print(column_list)
+# print(column_list)
 
 for i in column_list:
-    print(i)
+    # print(i)
     write(str(i))
     press('tab')
